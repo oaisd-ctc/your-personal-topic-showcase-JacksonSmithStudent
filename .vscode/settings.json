@@ -13,5 +13,5 @@
     "emmet.includeLanguages": {},
     "emmet.showExpandedAbbreviation": "never",
     "emmet.triggerExpansionOnTab": false,
-    "emmet.extensionsPath": null
+    "emmet.extensionsPath": []
 }
