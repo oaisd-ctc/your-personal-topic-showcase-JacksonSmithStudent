@@ -4,7 +4,7 @@
         "comments": false,
         "strings": false
     },
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     "editor.suggestOnTriggerCharacters": false,
     "editor.parameterHints.enabled": false,
     "editor.hover.enabled": false,
@@ -13,5 +13,6 @@
     "emmet.includeLanguages": {},
     "emmet.showExpandedAbbreviation": "never",
     "emmet.triggerExpansionOnTab": false,
-    "emmet.extensionsPath": []
+    "emmet.extensionsPath": [],
+    "liveServer.settings.port": 5501
 }
