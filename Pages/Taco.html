@@ -95,6 +95,28 @@
                      <li>
                         Heat taco shells as directed on package. Serve taco shells with beef mixture, lettuce, tomato and cheese.</li>
         </ul>
+
+        <p id="clock"></p>
+
+       <script>
+        const timeElement = document.getElementById("clock");
+
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // Format the string with leading zeroes
+    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    timeElement.innerText = clockStr;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+        
+       </script>
        
     </body>
 </html>

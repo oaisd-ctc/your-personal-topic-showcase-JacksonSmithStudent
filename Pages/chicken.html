@@ -95,6 +95,28 @@
             </li>
                 <li>In shallow dish, place flour. In another shallow dish, beat egg and water. In third shallow dish, mix bread crumbs and cheese. Coat chicken with flour; dip into egg mixture, then coat with bread crumb mixture. Place on cookie sheet.</li>
                 <li>Bake 15 to 20 minutes, turning once, until chicken is no longer pink in center and coating is golden brown. Serve with dipping sauce.</li>
+
+                <p id="clock"></p>
+
+       <script>
+        const timeElement = document.getElementById("clock");
+
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // Format the string with leading zeroes
+    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    timeElement.innerText = clockStr;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+        
+       </script>
             
         </ul>
     </body>

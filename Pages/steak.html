@@ -88,5 +88,27 @@
                      diagonally at 1-inch intervals with a sharp knife. Do not cut into the meat because it will allow the juices to cook out and the beef will become dry.</li>
                      <li>Place the beef on the grill rack over medium heat. Cover the grill; cook 6 to 8 minutes for rib eye, 10 to 12 minutes for porterhouse and T-bone or 13 to 15 minutes for sirloin and tenderloin, turning beef once halfway through cooking, until an instant-read meat thermometer inserted in center of thickest part reads 145°F for medium-rare or 160°F for medium doneness. Sprinkle with salt and pepper.</li>
             </ul>
+
+            <p id="clock"></p>
+
+       <script>
+        const timeElement = document.getElementById("clock");
+
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // Format the string with leading zeroes
+    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    timeElement.innerText = clockStr;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+        
+       </script>
     </body>
 </html>

@@ -92,5 +92,27 @@
                      If bubbles jump around, heat is just right.) Brush with vegetable oil if necessary (or spray with cooking spray before heating).</li>
                      <li>For each pancake, pour slightly less than 1/4 cup batter onto griddle. Cook 2 to 3 minutes or until bubbly on top and dry around edges. Turn; cook other side until golden brown.</li>
         </ul>
+
+        <p id="clock"></p>
+
+       <script>
+        const timeElement = document.getElementById("clock");
+
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // Format the string with leading zeroes
+    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    timeElement.innerText = clockStr;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+        
+       </script>
     </body>
 </html>
