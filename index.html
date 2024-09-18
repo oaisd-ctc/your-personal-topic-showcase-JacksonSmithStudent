@@ -97,11 +97,26 @@
        <p class="Ad">Now A word from our sponsor </p>
        <a href="Pages/Ad.html"><img class="car" src="images/Car2.jpg" alt="Ad" width="400px" height="500px"></a>
 
-       <p id="demo"></p>
+       <p id="clock"></p>
 
        <script>
-        const d = new Date();
-        document.getElementById("demo").innerHTML = d;
+        const timeElement = document.getElementById("clock");
+
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    // Format the string with leading zeroes
+    const clockStr = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    timeElement.innerText = clockStr;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+        
        </script>
     </body>
 </html>
